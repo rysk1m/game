@@ -1,0 +1,96 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #87CEEB; 
+  font-family: 'Arial', sans-serif;
+  text-align: center; 
+  background-image: url('background.png');
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}
+.game {
+  width: 600px;
+  height: 200px;
+  border-bottom: 2px solid #000;
+  margin: 50px auto;
+  position: relative; 
+  overflow: hidden; 
+  background: rgba(255, 255, 255, 0.6); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+#player {
+  width: 50px;
+  height: 50px;
+  background-image: url('mario.png'); 
+  background-size: cover; 
+  position: absolute;
+  top: 150px; 
+  left: 50px; 
+}
+#damper {
+  width: 40px;
+  height: 40px;
+  background-image: url('tasbaqa.png');
+  background-size: cover; 
+  position: absolute;
+  top: 160px; 
+  left: 600px; 
+}
+.start, .restart {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; 
+  background: #28a745; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.start:hover, .restart:hover {
+  background: #218838; 
+}
+.score {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff; 
+}
+.animate {
+  animation: moveDamper 2s infinite linear; 
+}
+.active {
+  animation: jumpPlayer 0.5s  ease-out;
+}
+
+@keyframes moveDamper {
+  0% {
+    left: 600px;
+  }
+  100% {
+    left: -40px; 
+  }
+}
+@keyframes jumpPlayer {
+  0% {
+    top: 150px; 
+  }
+  50% {
+    top: 80px;
+  }
+  100% {
+    top: 150px;
+  }
+}
